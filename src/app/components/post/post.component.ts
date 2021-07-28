@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IPost} from "../models/IPost";
+import {Ipost} from "../../models/ipost";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -10,7 +10,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class PostComponent implements OnInit {
 
   @Input()
-  post: IPost;
+  post: Ipost;
 
 
   constructor(
