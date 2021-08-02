@@ -1,7 +1,7 @@
 <h3>{{user?.name}} ({{user?.username}})</h3>
-<p>{{user.email}}<br>
-{{user.phone}}<br>
-{{user.website}}<br>
-{{user.company.name}}</p>
+<p>mail: {{user?.email}}<br>
+phone: {{user?.phone}}<br>
+web: {{user?.website}}<br>
+company: {{user?.company?.name}}</p>
 
 <button (click)="back()">back</button>
