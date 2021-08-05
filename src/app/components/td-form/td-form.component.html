@@ -1,8 +1,8 @@
-<form #tref (ngSubmit)="save(tref)">
+<form #tref (ngSubmit)="details(tref)">
   <div>
     <label><h4>Choose user</h4>
       <select name="user">
-        <option *ngFor="let user of users" value="{{user.id}}">{{user.name}}</option>
+        <option *ngFor="let user of users" value="{{user.name}}">{{user.name}}</option>
       </select>
       <button (click)="userDetails()">details</button>
     </label>

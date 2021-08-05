@@ -24,11 +24,13 @@ export class TdFormComponent implements OnInit {
   }
 
   userDetails() {
+
     this.user = this.router.getCurrentNavigation()?.extras.state as IUser;
-    // this.router.navigate([this.user.id], {relativeTo: this.activatedRoute})
+
   }
 
-  save(tref: HTMLFormElement) {
-    console.log(tref.user)
+  details(tref: HTMLFormElement) {
+       console.log(tref.user.value)
+
   }
 }
