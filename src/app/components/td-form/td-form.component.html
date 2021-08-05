@@ -1,0 +1,12 @@
+<form>
+  <div>
+    <label><h4>Choose user</h4>
+      <select name="user">
+        <option *ngFor="let user of users" value="{{user.id}}">{{user.name}}</option>
+      </select>
+      <button (click)="userDetails()">details</button>
+    </label>
+  </div>
+</form>
+
+
