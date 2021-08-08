@@ -12,17 +12,13 @@ export class UserDetailsComponent implements OnInit {
 
     user: IUser;
 
-  // constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
-  //   this.activatedRoute.params.subscribe(({id}) => {
-  //     this.userService.getUserById(id).subscribe(value => this.user = value);
-  //
-  //   });
-  // }
-  constructor(private router :Router, private activatedRoute: ActivatedRoute) {
-    this.user = this.router.getCurrentNavigation()?.extras.state as IUser;
-  }
+  constructor(private router :Router, private activatedRoute: ActivatedRoute, private userService: UserService) {
+    this.activatedRoute.params.subscribe(({id}) => {
+      this.userService.userDetails(id).subscribe(value => this.user = value);
 
-  ngOnInit(): void {
+    });
+  }
+    ngOnInit(): void {
   }
 
 }

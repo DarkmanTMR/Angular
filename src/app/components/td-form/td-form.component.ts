@@ -14,8 +14,7 @@ export class TdFormComponent implements OnInit {
   user: IUser;
 
 
-  constructor(private userService: UserService,private router: Router,
-              private activatedRoute: ActivatedRoute) {
+  constructor(private userService: UserService,private router: Router,private activatedRoute: ActivatedRoute) {
 
   }
 
@@ -24,13 +23,12 @@ export class TdFormComponent implements OnInit {
   }
 
   userDetails() {
-
     this.user = this.router.getCurrentNavigation()?.extras.state as IUser;
 
   }
 
   details(tref: HTMLFormElement) {
-       console.log(tref.user.value)
+      this.router.navigate([tref.user.value], {relativeTo:this.activatedRoute})
 
   }
 }

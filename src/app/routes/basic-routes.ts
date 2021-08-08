@@ -6,6 +6,5 @@ import {UserDetailsComponent} from "../components/user-details/user-details.comp
 
 export let routes: Routes = [
   {path: '', component: TdFormComponent},
-  {path: 'users', component: UsersComponent},
-  {path: 'users/:id', component: UserDetailsComponent}
+  {path: ':id', component: UserDetailsComponent}
   ]

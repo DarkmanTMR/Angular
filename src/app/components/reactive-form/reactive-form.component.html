@@ -1,0 +1,6 @@
+<form [formGroup]="Form">
+  <select name="user">
+    <option *ngFor="let user of users" value="{{user.id}}">{{user.name}}</option>
+  </select>
+  <button>details</button>
+</form>
