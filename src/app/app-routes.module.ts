@@ -3,7 +3,8 @@ import {NgModule} from "@angular/core";
 
 
 const routes: Routes = [
-      {path: 'users', loadChildren: () => import('./user/user.module').then(m => m.UserModule)}
+      {path: 'users', loadChildren: () => import('./user/user.module').then(m => m.UserModule)},
+      {path: 'posts', loadChildren: () => import('./post/post.module').then(m => m.PostModule)}
     ]
 
 @NgModule({
